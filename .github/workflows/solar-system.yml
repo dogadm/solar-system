@@ -55,7 +55,7 @@ jobs:
         - name: Setup NodeJS Version - 18
           uses: actions/setup-node@v3
           with:
-            nodejs_version: 18
+            node_version: 18
             
         - name: Install Dependencies
           run: npm install
@@ -64,7 +64,7 @@ jobs:
           run: npm run coverage
 
         - name: Archive Test Result
-          uses: actions/upload-artifacts@v3
+          uses: actions/upload-artifact@v3
           with:
             name: Code-Coverage-Result
             path: coverage
